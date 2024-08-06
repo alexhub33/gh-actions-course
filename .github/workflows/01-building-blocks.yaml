@@ -1,0 +1,21 @@
+name: 01 - Building Blocks
+on: 
+  workflow_dispatch:
+
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "Hello, world!"
+  my-second-job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Failed step  #This exit 1 will fail,if the step fails, the whole workflow will fail.  Subsequent steps will not be executed by default
+      run: |
+        echo "I will fail"
+        exit 1   
+    - name: Say goodbye
+      run: echo "Goodbye!"
+
+

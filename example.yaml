@@ -1,0 +1,39 @@
+name: Myworkflow
+
+config:
+  - runs-on: first-directory
+    value: staging
+
+#Define arrays:
+colors:
+  - red
+  - green
+  - blue
+  - 10
+  - true
+
+#Arrays elements also known as objects:
+colors : 
+  - name: red
+    hex: "#ff0000"
+  - name: green
+    hex: "#00ff00"
+  - name: blue
+    hex: "#0000ff"
+
+
+#Complex objects in arrays:
+colors : 
+  - name: red
+    hex: "#ff0000"
+    labels:
+      - experimental
+      - acessibility
+
+# name
+# environment 
+
+#NOT name.environmnet, this would happen if environment is tabbed in
+name: ywofklow
+environment: staging  #this is valid but not if you indent it.  Because we would be passing environemnt as a child
+
