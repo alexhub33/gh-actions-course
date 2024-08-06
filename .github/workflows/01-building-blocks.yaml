@@ -14,7 +14,7 @@ jobs:
       - name: Failed step  #This exit 1 will fail,if the step fails, the whole workflow will fail.  Subsequent steps will not be executed by default
         run: |
           echo "I will fail"
-          exit 1   
+          exit 0   
       - name: Say goodbye
         run: echo "Goodbye!"
 
